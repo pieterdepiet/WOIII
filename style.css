@@ -1,0 +1,175 @@
+body {
+  text-align: center;
+  position: relative;
+}
+html {
+  border: #375e10 solid;
+}
+
+nav {
+  text-align: left;
+  border: solid #375e10;
+  padding: 1px;
+}
+#auth {
+  position: absolute;
+  top:3px;right:3px;
+}
+#auth .dropdowncontainer {
+  transition: .5s padding, .5s margin;
+  background-color: white;
+}
+#auth .dropdowncontainer:hover {
+  padding: 3px;
+  margin: -3px;
+}
+@keyframes boxShadowShow {
+  0% {box-shadow: 0 0 0 0 black}
+  50% {box-shadow: 0 0 0 0 black}
+  100% {box-shadow: 0 2px 5px 0 black}
+}
+@keyframes boxShadowHide {
+  0% {box-shadow: 0 2px 5px 0 black}
+  50% {box-shadow: 0 2px 5px 0 black}
+  100% {box-shadow: 0 0 0 0 black}
+}
+.dropdowncontainer {
+  box-shadow: 0 0 0 0 black;
+  animation: 1s boxShadowHide;
+}
+.dropdowncontainer:hover {
+  animation: 1s boxShadowShow;
+  box-shadow: 0px 2px 5px 0 black
+}
+.dropdowncontainer:after {
+  content: "";
+  display: block;
+  transition: .5s height;
+  height: 0em;
+}
+.dropdowncontainer:hover:after {
+  height: 1.2em;
+}
+.dropdowncontainer:hover .dropdownmenu {
+  opacity: 1.0;
+  top: 1.2em;
+  padding-right: 3px;
+}
+.dropdowncontainer .dropdownmenu {
+  position: absolute;
+  padding-right: 0;
+  top: 0em;
+  right: 1px;
+  transition: .5s top, .5s opacity, .5s padding-right;
+  opacity: 0.0;
+}
+h1 {
+  margin: 10px;
+}
+
+.loadcircle {
+  animation: spin 1s infinite linear;
+  display: inline-block;
+}
+.foreground {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+}
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+.rotateleft {
+  /* animation: rotateleft 1s infinite; */
+  vertical-align: middle;
+}
+@keyframes rotateleft {
+  from {transform: translateX(-40px) rotateZ(360deg) translateX(40px);}
+  to {transform: translateX(-40px) rotateZ(0deg) translateX(40px);}
+}
+.rotateright {
+  /* animation: rotateright 1s infinite; */
+  vertical-align: middle;
+}
+@keyframes rotateright {
+  from {transform: translateX(40px) rotateZ(0deg) translateX(-40px);}
+  to {transform: translateX(40px) rotateZ(360deg) translateX(-40px);}
+}
+
+a {
+  color: blue;
+  box-shadow: 0 0 0 0;
+  transition: .5s box-shadow;
+}
+a:hover {
+  box-shadow: 0 0 0 1px;
+}
+button {
+  color: lightgreen;
+  margin: 0;
+  background-color: rgba(0,0,0,.5);
+  border: none;
+  border-radius: 5px;
+  transition: .2s background-color, .5s color;
+}
+button:hover {
+  color: black;
+  background-color: rgba(0,0,0,.2);
+  border: solid 2px #375e10;
+  margin: -2px;
+}
+spananja-source {
+  display: inline-block;
+  animation: spin .5s linear infinite;
+}
+@keyframes spin {
+  from {transform: rotate(0deg);border:solid;border-top-color:red;border-radius:1em;width:1em;height:1em;}
+  to {transform: rotate(360deg);border:solid;border-top-color:red;border-radius:1em;width:1em;height:1em;}
+}
+
+spananja-tabs-container {
+  display: block;
+  border: solid 10px;
+  border-radius: 10px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  overflow: hidden;
+  height: 1em;
+  transition: .5s height ease;
+  border: solid #375e10;
+}
+ul li:hover {
+  height: 4em;
+}
+input[name=code] {
+  text-align: center;
+}
+textarea {
+  resize: none;
+  color: white;
+  background-color: #375e10;
+  border: none;
+}
+
+.modalcontainer {
+  display: none;
+}
+.activemodalcontainer {
+  display: flex;
+  position: absolute;
+  top:0;left:0;right:0;bottom:0;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,.5);
+}
+#modal {
+  border: solid;
+  background-color: white;
+  padding: .5em;
+}

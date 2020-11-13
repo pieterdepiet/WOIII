@@ -1,0 +1,30 @@
+<spananja-exportdefault>
+  <spananja-tabs-container usehash>
+    <spananja-tabs-tab tabname="Join public game">
+      <h2>Public games</h2>
+      <ul id="gameslist"></ul>
+      <spananja-source url="/app/home" default/>
+    </spananja-tabs-tab>
+    <spananja-tabs-tab tabname="Join private game">
+      <h2>Private games</h2>
+      <input type="text" name="code" placeholder="xxx-xxx-xxx" oninput="checkMinus()" maxlength="11">
+    </spananja-tabs-tab>
+    <spananja-tabs-tab tabname="Create public game">
+      <form onsubmit="createPublicGame(window.event)">
+        <h2>New public game</h2>
+        <input type="text" name="gamename">
+        <br>
+        <textarea name="gamedescription" rows="4" cols="40" maxlength="100"></textarea>
+        <br>
+        <button type="submit">Create</button>
+      </form>
+    </spananja-tabs-tab>
+    <spananja-tabs-tab tabname="Create private game">
+      <h2>New private game</h2>
+    </spananja-tabs-tab>
+    <spananja-tabs-tab tabname="My games">
+      <h2>My games</h2>
+      <ul id='mygameslist'></ul>
+    </spananja-tabs-tab>
+  </spananja-tabs-container>
+</spananja-exportdefault>

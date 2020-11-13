@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="/static/spananjatest.js" charset="utf-8"></script>
+    <script src="/static/woiii.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/logo.svg">
+  </head>
+  <body onload="spananja.start()">
+    <nav>
+      <a href="/">Home</a>
+      <span id="auth">
+        <div class="loadcircle">
+
+        </div>
+      </span>
+    </nav>
+    <div class="modalcontainer"><div id="modal"></div></div>
+    <spananja-route route="/" title="home">
+      <spananja-source url="/app/home.html" default/>
+    </spananja-route>
+    <spananja-route route="/auth" title="auth">
+      <h2>Identify before continuing</h2>
+      <spananja-tabs-container>
+        <spananja-tabs-tab tabname="Sign in">
+          <spananja-source url="/app/auth.html" importid="signin"/>
+        </spananja-tabs-tab>
+        <spananja-tabs-tab tabname="Sign up">
+          <!-- <spananja-source url="/app/auth.html" importid="signup"/> -->
+          <spananja-source url="/app/somepath.html" default/>
+        </spananja-tabs-tab>
+      </spananja-tabs-container>
+    </spananja-route>
+    <spananja-route route="/join" title="join">
+      <h1>Join</h1>
+      <spananja-source url="/app/join" default/>
+    </spananja-route>
+    <spananja-route route="/chooseplayer" title="choose player">
+      <h1>Choose player</h1>
+      <ul id="playerlist">
+
+      </ul>
+    </spananja-route>
+  </body>
+</html>

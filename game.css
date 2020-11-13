@@ -1,0 +1,45 @@
+/* div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+} */
+
+
+
+.svgContainer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #74e0db;
+}
+
+.inactiveMap {
+  animation: hide 1s;
+  animation-fill-mode: forwards;
+}
+
+.activeMap {
+  display: initial;
+
+
+  animation: show 1s;
+}
+
+@keyframes hide {
+  0% {transform: rotateX(0deg); display: initial;}
+
+  50% {transform: rotateX(90deg); display: none;}
+  100% {transform: rotateX(90deg); display: none;}
+}
+
+@keyframes show {
+  0% {transform: rotateX(90deg);}
+  50% {transform: rotateX(90deg);}
+  100% {transform: rotateX(0deg);}
+}

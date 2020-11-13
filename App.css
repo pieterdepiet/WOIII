@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+}
+
+.dropdown:hover p {
+  display: inline-block;
+}
+
+.dropdown p {
+  display: none;
+}
+
+.dropdownOpen p {
+  display: inline-block;
+}
+
+h1 {
+  margin: 10px;
+}
+
+.loadcircle {
+  animation: rotate 1s infinite linear;
+  display: inline-block;
+  vertical-align: bottom;
+  border: solid rgba(0,0,0,0) 1em;
+  border-top: solid white 1em;
+  width: 5em;
+  height: 5em;
+  border-radius: 5em;
+}
+
+.foreground {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+}
+
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
